@@ -1,0 +1,479 @@
+
+body,div,section,header,footer,p,span,nav{
+  padding: 0;
+  margin: 0;
+}
+body{
+  font-family: 微软雅黑;
+  -webkit-font-smoothing: antialiased;
+}
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+a{
+  text-decoration: none;
+  color: #777;
+}
+section,footer,header{
+  display: block;
+}
+
+//共同
+.content{
+  margin: 0 auto;
+}
+.header{
+  width: 100%;
+  background-color: #fff;
+  .logo{
+    display: inline-block;
+    background: url("../img/logo.png") no-repeat;
+    background-size: 100%;
+  }
+  .nav{
+    font-size: 0;
+    a{
+      display: inline-block;
+      width: 6em;
+      span{
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+.banner{
+  position: relative;
+  .modal.tip{
+    padding-top: 3em;
+    text-align: left;
+  }
+  .modal{
+    position: absolute;
+    line-height: 1.5em;
+    padding: 2em 2em;
+    left: 40%;
+    top:45%;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    .dismiss{
+      position: absolute;
+      top:0;
+      right:0;
+      width: 1.5em;
+      height: 1.5em;
+      line-height: 1.5em;
+      font-size: 1.5em;
+      color: #fff;
+      cursor: pointer;
+    }
+    .sure{
+      display: inline-block;
+      padding: 0.5em 1em;
+      border:1px solid #333;
+      border-radius: 5px;
+      color: #000;
+      background-color: #fff;
+      cursor: pointer;
+      margin-top: 1.5em;
+      margin-left: 10em;
+    }
+  }
+}
+.main{
+  .content{
+    img{
+      width: 90%;
+    }
+    .description{
+      line-height: 1.8em;
+      color: #000;
+    }
+  }
+}
+.english{
+  padding-top: 1em;
+  background:#f9b136 url(../img/bg.png) no-repeat center;
+  background-size: cover;
+  .content{
+    img{
+      vertical-align: bottom;
+    }
+  }
+}
+.section{
+  position: relative;
+  h2{
+    font-size: 22px;
+    line-height: 2em;
+    color: #333;
+    font-weight: bold;
+  }
+  p{
+    font-size: 16px;
+    line-height: 2.4em;
+  }
+  .code{
+    width: 133px;
+    height: 154px;
+    background: url("../img/wx.png") no-repeat;
+  }
+}
+.footer{
+  width: 100%;
+  padding: 36px 0;
+  background-color: #ececec;
+  font-size: 16px;
+  line-height: 24px;
+  color: #5e5e5e;
+  .content{
+    .footerCode{
+      img{
+        width: 126px;
+      }
+    }
+  }
+  a{
+    text-decoration: underline;
+  }
+}
+
+
+//1280以上
+@media screen and (min-width: 1280px){
+  .content{
+    width: 1200px;
+  }
+  .header{
+    position: relative;
+    height: 6em;
+    .logo{
+      width: 125px;
+      height: 68px;
+      margin-top: 16px;
+    }
+    .nav{
+      position: absolute;
+      left: 50%;
+      top:0;
+      a{
+        height: 6em;
+        line-height: 6em;
+        text-align: center;
+        font-size: 16px;
+        &:hover{
+          background-color: #2aacf8;
+          color: #fff;
+        }
+        span{
+          width: 6em;
+          height: 1em;
+          line-height: 1em;
+          border-right: 1px solid #777;
+        }
+      }
+      .active{
+        background-color: #2aacf8;
+        color: #fff;
+        span{
+          border-right: 0;
+        }
+      }
+    }
+  }
+  .main{
+    .content{
+      position: relative;
+      .description{
+        font-size: 20px;
+        position: absolute;
+      }
+    }
+    .math{
+      .description{
+        width: 21em;
+        left: 0;
+        top:14em;
+      }
+    }
+    .pinyin{
+      .description{
+        width: 20em;
+        left: 0;
+        top:14em;
+      }
+    }
+  }
+  .english{
+    .description{
+      width: 20em;
+      right: 2em;
+      top:14em;
+    }
+  }
+}
+//768以上
+
+@media screen and (min-width: 768px){
+  .banner{
+    img{
+      width: 100%;
+    }
+    .swiper{
+      position: relative;
+      width: 100%;
+      img{
+        width: 100%;
+      }
+      .download{
+        position: absolute;
+        width: 100%;
+        top:40%;
+        left:36%;
+        height: 80%;
+        a{
+          display: block;
+          width: 18%;
+          height: 30%;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .main{
+    .math{
+      padding: 3em 0;
+    }
+    .pinyin{
+      padding: 3em 0;
+    }
+  }
+  .about{
+    padding-top: 6em;
+    padding-bottom: 8em;
+  }
+  .section{
+    padding-bottom: 6em;
+    .code{
+      position: absolute;
+      top:4em;
+      right: 0;
+    }
+  }
+  .footer{
+    .content{
+      position: relative;
+      .footerCode{
+        width: 126px;
+        position: absolute;
+        right: 0;
+        top:0;
+      }
+    }
+  }
+}
+//768~1278
+@media screen and (min-width: 768px) and (max-width: 1279px){
+  .content{
+    width: 90%;
+  }
+  .header{
+    position: relative;
+    height: 6em;
+    .logo{
+      width: 125px;
+      height: 68px;
+      margin-top: 16px;
+    }
+    .nav{
+      position: absolute;
+      left: 50%;
+      top:0;
+      a{
+        height: 6em;
+        line-height: 6em;
+        text-align: center;
+        font-size: 16px;
+        &:hover{
+          background-color: #2aacf8;
+          color: #fff;
+        }
+        span{
+          width: 6em;
+          height: 1em;
+          line-height: 1em;
+          border-right: 1px solid #777;
+        }
+      }
+      .active{
+        background-color: #2aacf8;
+        color: #fff;
+        span{
+          border-right: 0;
+        }
+      }
+    }
+  }
+  .main{
+    .content{
+      .description{
+        font-size: 16px;
+      }
+    }
+  }
+  .english{
+    .description{
+      color: #fff;
+    }
+  }
+}
+//以下
+@media screen and (max-width: 767px){
+  .content{
+    width: 90%;
+  }
+  .header{
+    margin-bottom: 1em;
+    .content{
+      width: 100%;
+      .logo{
+        width: 4em;
+        height: 2em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 5%;
+      }
+      .nav{
+        display: flex;
+        background-color: #2aacf8;
+        a{
+          flex: 1;
+          height: 3em;
+          line-height: 3em;
+          text-align: center;
+          font-size: 16px;
+          color: #fff;
+          &:hover{
+            span{
+              border-bottom: 1px solid #fff;
+            }
+          }
+          span{
+            height: 2em;
+            line-height: 2em;
+            border-bottom: 1px solid transparent;
+          }
+        }
+        .active{
+          span{
+            border-bottom: 1px solid #fff;
+          }
+        }
+      }
+    }
+  }
+  .banner{
+    text-align: center;
+    img{
+      width: 90%;
+      margin: 0 auto;
+    }
+    .swiper{
+      position: relative;
+      width: 100%;
+      img{
+        width: 90%;
+      }
+      .download{
+        position: absolute;
+        width: 50%;
+        top:38%;
+        left:24%;
+        height: 80%;
+        a{
+          display: block;
+          width: 45%;
+          height: 28%;
+        }
+      }
+    }
+  }
+  .main{
+    .content{
+      .description{
+        font-size: 14px;
+      }
+    }
+    .math{
+      padding: 1em 0;
+    }
+    .pinyin{
+      padding: 1em 0;
+    }
+  }
+  .english{
+    .description{
+        color: #fff;
+      }
+  }
+  .about{
+    padding-top: 1em;
+    padding-bottom: 2em;
+  }
+  .section{
+    padding-bottom: 2em;
+      .code{
+        margin: 0 auto;
+      }
+  }
+  .footer{
+    .content{
+      text-align: center;
+      .footerCode{
+        margin-top: 1em;
+      }
+    }
+  }
+}
+
+.privacy{
+  background-color: #f1f1f1;
+  .privacyMain{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 10px 120px;
+    .mainTitle{
+      color: #575757;
+      font-size: 30px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .mainContent{
+      color: #575757;
+      font-size: 18px;
+      text-align: left;
+    }
+    .sub{
+      margin: 60px 0;
+      .subTitle{
+        color: #575757;
+        margin-bottom: 20px;
+        font-size: 22px;
+        text-align: left;
+        font-weight: bold;
+      }
+      .subContent{
+        color: #575757;
+        font-size: 18px;
+        line-height: 36px;
+        text-align: left;
+      }
+    }
+
+  }
+}
+
+
+
+
